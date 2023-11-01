@@ -252,4 +252,8 @@ while act != "Выход" or act != "выход" or kromer != 10000:
         print("Вы прошли игру!")
         break
     break
-
+lines = [stats], [kromer]
+with open('save.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    for line in lines:
+        writer.writerow(line)
